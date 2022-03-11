@@ -15,7 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React 
+          <h1>MaxBB</h1> 
+
         </a>
       </header>
     </div>
