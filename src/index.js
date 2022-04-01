@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Home from "./Pages/HomePage/index"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className='fundo'>
+    <Home/>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

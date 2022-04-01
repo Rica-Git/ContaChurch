@@ -16,7 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React 
-          <h1>MaxBB</h1> 
+          <h1>Conta Church</h1> 
 
         </a>
       </header>
