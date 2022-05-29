@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import "./styled.css";
 
 const LoginPage = () => {
-
+    const axios = require('axios')
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
    
@@ -12,6 +12,20 @@ const LoginPage = () => {
 
         console.log({email, password});
     };
+    
+    async function login(email, password) {
+        let body = {
+            'EMAIL': email,
+            'SENHA': password
+        }
+        let response = await axios.post('http://127.0.0.1:5000/logar', body)
+
+        if (response){
+            console.log(response.data)
+        } else {
+            login(email, password)
+        }
+    }
 
     return (
         <div id = "login">
@@ -33,7 +47,7 @@ const LoginPage = () => {
 
                 </div>
                 <div className="actions">
-                    <button type="submit">Entrar</button>
+                    <button type="submit" onClick={()=>login(email, password)}>Entrar</button>
                 </div>
             </form>
         </div>
